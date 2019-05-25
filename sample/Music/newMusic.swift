@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class newMusic: UIViewController {
 
+    @IBOutlet weak var songTF: UITextField!
+    @IBOutlet weak var lyricTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func save(_ sender: Any) {
+        
+        
+    }
+    
 
 
 }

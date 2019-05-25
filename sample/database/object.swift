@@ -12,6 +12,8 @@ class MC: Object {
     
     @objc dynamic var name = ""
     @objc dynamic var image:UIImage?
+    @objc dynamic var profiler = ""
+    
     
     let songs = List<Song>()
     
