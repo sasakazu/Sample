@@ -25,12 +25,13 @@ class MCMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         let user = Auth.auth().addStateDidChangeListener { (auth, user) in
             
-            self.name.text = user?.email
+            self.name.text = user?.displayName
         
             print(user?.email)
             
         }
         
+       
     }
     
     

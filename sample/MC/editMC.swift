@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import FirebaseAuth
 
 class editMC: UIViewController {
     
@@ -20,34 +21,28 @@ class editMC: UIViewController {
         super.viewDidLoad()
         
        
-        textview.layer.borderColor = UIColor.black.cgColor
-        
     }
     
     @IBAction func save(_ sender: Any) {
         
+        let user = Auth.auth().currentUser
+        if let user = user {
+            let changeRequest = user.createProfileChangeRequest()
+            
+            changeRequest.displayName = nameTF.text!
+            
+            changeRequest.commitChanges { error in
+                if let error = error {
+                    // An error happened.
+                } else {
+                    
+                    print(user.displayName)
+                    // Profile updated.
+                }
+            }
+        }
         
-//        let user = MC()
-//        
-//        user.profile = textview.text!
-//
-//        user.save()
-//        
-//        do {
-//            let realm = try Realm()
-//            try! realm.write {
-//                realm.add(user)
-//                
-//                user.save()
-//                
-//                print("成功", user)
-//            }
-//        } catch {
-//            print("エラー")
-//        }
-//        
-//        dismiss(animated: true, completion: nil)
-//        
+     dismiss(animated: true, completion: nil)
         
     }
     
@@ -61,13 +56,6 @@ class editMC: UIViewController {
         
         
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let next = segue.destination as? MCMain
-//        let _ = next?.view
-//        
-//        next?.mcName = nameTF.text!
-//    }
     
     
     
