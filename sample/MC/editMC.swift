@@ -28,13 +28,14 @@ class editMC: UIViewController {
         let user = Auth.auth().currentUser
         if let user = user {
             let changeRequest = user.createProfileChangeRequest()
-            
             changeRequest.displayName = nameTF.text!
             
             changeRequest.commitChanges { error in
                 if let error = error {
                     // An error happened.
                 } else {
+                
+                    
                     
                     print(user.displayName)
                     // Profile updated.
@@ -42,8 +43,7 @@ class editMC: UIViewController {
             }
         }
         
-     dismiss(animated: true, completion: nil)
-        
+    self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func cancel(_ sender: Any) {
