@@ -26,6 +26,9 @@
 		73EA82FA229909F00004553F /* beats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F9229909F00004553F /* beats.swift */; };
 		73EA82FC22990A1F0004553F /* recoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82FB22990A1F0004553F /* recoding.swift */; };
 		73F23372229A36FB0079EFBE /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F23371229A36FB0079EFBE /* customCell.swift */; };
+		73F23374229CEE6A0079EFBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F23373229CEE6A0079EFBE /* GoogleService-Info.plist */; };
+		73F23381229CF4190079EFBE /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F23380229CF4190079EFBE /* login.swift */; };
+		73F23383229CF4310079EFBE /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F23382229CF4310079EFBE /* signUp.swift */; };
 		AE428E5ED5C160BD11387601 /* Pods_sampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F0D4F17528D26E99B4E9C1 /* Pods_sampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		73EA82F9229909F00004553F /* beats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beats.swift; sourceTree = "<group>"; };
 		73EA82FB22990A1F0004553F /* recoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = recoding.swift; path = Music/recoding.swift; sourceTree = "<group>"; };
 		73F23371229A36FB0079EFBE /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customCell.swift; path = Music/customCell.swift; sourceTree = "<group>"; };
+		73F23373229CEE6A0079EFBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73F23380229CF4190079EFBE /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		73F23382229CF4310079EFBE /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		B8E01B47EAA77F5701AF734C /* Pods-sampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleUITests.release.xcconfig"; path = "Target Support Files/Pods-sampleUITests/Pods-sampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C680A543F0691D8BAE9B3895 /* Pods-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-sampleUITests/Pods-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D009725B7275B57111184445 /* Pods-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleTests.release.xcconfig"; path = "Target Support Files/Pods-sampleTests/Pods-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,9 +158,11 @@
 				7386CEB822969571008F697A /* Main.storyboard */,
 				73F23371229A36FB0079EFBE /* customCell.swift */,
 				73EA82FB22990A1F0004553F /* recoding.swift */,
+				73F23384229CF43C0079EFBE /* New Group */,
 				7386CEE92297ABD6008F697A /* Music */,
 				73EA82F2229907260004553F /* MC */,
 				7386CEBB22969575008F697A /* Assets.xcassets */,
+				73F23373229CEE6A0079EFBE /* GoogleService-Info.plist */,
 				7386CEBD22969575008F697A /* LaunchScreen.storyboard */,
 				7386CEC022969575008F697A /* Info.plist */,
 				7386CEE62297AB58008F697A /* database */,
@@ -207,6 +215,15 @@
 				73EA82F7229907A80004553F /* MCTracks.swift */,
 			);
 			path = MC;
+			sourceTree = "<group>";
+		};
+		73F23384229CF43C0079EFBE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				73F23380229CF4190079EFBE /* login.swift */,
+				73F23382229CF4310079EFBE /* signUp.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A5641131CE1DCF0D16D4D8CD /* Frameworks */ = {
@@ -328,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7386CEBF22969575008F697A /* LaunchScreen.storyboard in Resources */,
+				73F23374229CEE6A0079EFBE /* GoogleService-Info.plist in Resources */,
 				7386CEBC22969575008F697A /* Assets.xcassets in Resources */,
 				7386CEBA22969571008F697A /* Main.storyboard in Resources */,
 			);
@@ -381,6 +399,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-sample/Pods-sample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -390,6 +409,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -452,8 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73EA82FC22990A1F0004553F /* recoding.swift in Sources */,
+				73F23383229CF4310079EFBE /* signUp.swift in Sources */,
 				73EA82F4229907430004553F /* MCMain.swift in Sources */,
 				73F23372229A36FB0079EFBE /* customCell.swift in Sources */,
+				73F23381229CF4190079EFBE /* login.swift in Sources */,
 				73EA82F8229907A80004553F /* MCTracks.swift in Sources */,
 				7386CEEB2297AC08008F697A /* newMusic.swift in Sources */,
 				7386CEB722969571008F697A /* ViewController.swift in Sources */,
