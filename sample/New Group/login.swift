@@ -18,12 +18,24 @@ class login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func loginBtn(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (user, error) in
+           
+        
+            if let error = error {
+                print("login failed! \(error)")
+                return
+            }
+            
+            if let user = user {
+                print("user :) has been signed in successfully.")
+            }
+        }
     }
     
-
 }
+

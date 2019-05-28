@@ -25,8 +25,17 @@ class signUp: UIViewController {
 
     @IBAction func loginBtn(_ sender: Any) {
         
+        Auth.auth().createUser(withEmail: emailTF.text!, password: passTF.text!) { (authResult, error) in
+         
+            
+            guard (authResult?.user) != nil else { return }
         
-    }
+        
+        }
     
+    }
 
+    
+    
+    
 }
