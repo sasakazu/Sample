@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MCSongs: UIViewController {
+class MCTracs: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

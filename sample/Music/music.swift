@@ -11,7 +11,7 @@ import RealmSwift
 
 class music: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
-    var songs: Results<Song>!
+    var songs: Results<Track>!
 
     @IBOutlet weak var tableview: UITableView!
     
@@ -33,10 +33,10 @@ class music: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         
-        let object = songs[indexPath.row]
+//        let object = songs[indexPath.row]
         
         
-        cell.textLabel?.text = object.name
+//        cell.textLabel?.text = object.name
         
         return cell
     

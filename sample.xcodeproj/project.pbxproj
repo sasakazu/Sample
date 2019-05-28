@@ -22,9 +22,10 @@
 		7386CEED2297AC29008F697A /* musicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7386CEEC2297AC29008F697A /* musicDetail.swift */; };
 		73EA82F4229907430004553F /* MCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F3229907430004553F /* MCMain.swift */; };
 		73EA82F6229907740004553F /* editMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F5229907740004553F /* editMC.swift */; };
-		73EA82F8229907A80004553F /* MCSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F7229907A80004553F /* MCSongs.swift */; };
+		73EA82F8229907A80004553F /* MCTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F7229907A80004553F /* MCTracks.swift */; };
 		73EA82FA229909F00004553F /* beats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F9229909F00004553F /* beats.swift */; };
 		73EA82FC22990A1F0004553F /* recoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82FB22990A1F0004553F /* recoding.swift */; };
+		73F23372229A36FB0079EFBE /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F23371229A36FB0079EFBE /* customCell.swift */; };
 		AE428E5ED5C160BD11387601 /* Pods_sampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F0D4F17528D26E99B4E9C1 /* Pods_sampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,9 +69,10 @@
 		7386CEEC2297AC29008F697A /* musicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicDetail.swift; sourceTree = "<group>"; };
 		73EA82F3229907430004553F /* MCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMain.swift; sourceTree = "<group>"; };
 		73EA82F5229907740004553F /* editMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editMC.swift; sourceTree = "<group>"; };
-		73EA82F7229907A80004553F /* MCSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSongs.swift; sourceTree = "<group>"; };
+		73EA82F7229907A80004553F /* MCTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTracks.swift; sourceTree = "<group>"; };
 		73EA82F9229909F00004553F /* beats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beats.swift; sourceTree = "<group>"; };
 		73EA82FB22990A1F0004553F /* recoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = recoding.swift; path = Music/recoding.swift; sourceTree = "<group>"; };
+		73F23371229A36FB0079EFBE /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customCell.swift; path = Music/customCell.swift; sourceTree = "<group>"; };
 		B8E01B47EAA77F5701AF734C /* Pods-sampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleUITests.release.xcconfig"; path = "Target Support Files/Pods-sampleUITests/Pods-sampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C680A543F0691D8BAE9B3895 /* Pods-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-sampleUITests/Pods-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D009725B7275B57111184445 /* Pods-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleTests.release.xcconfig"; path = "Target Support Files/Pods-sampleTests/Pods-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				7386CEB422969571008F697A /* AppDelegate.swift */,
 				7386CEB622969571008F697A /* ViewController.swift */,
 				7386CEB822969571008F697A /* Main.storyboard */,
+				73F23371229A36FB0079EFBE /* customCell.swift */,
 				73EA82FB22990A1F0004553F /* recoding.swift */,
 				7386CEE92297ABD6008F697A /* Music */,
 				73EA82F2229907260004553F /* MC */,
@@ -201,7 +204,7 @@
 			children = (
 				73EA82F3229907430004553F /* MCMain.swift */,
 				73EA82F5229907740004553F /* editMC.swift */,
-				73EA82F7229907A80004553F /* MCSongs.swift */,
+				73EA82F7229907A80004553F /* MCTracks.swift */,
 			);
 			path = MC;
 			sourceTree = "<group>";
@@ -446,7 +449,8 @@
 			files = (
 				73EA82FC22990A1F0004553F /* recoding.swift in Sources */,
 				73EA82F4229907430004553F /* MCMain.swift in Sources */,
-				73EA82F8229907A80004553F /* MCSongs.swift in Sources */,
+				73F23372229A36FB0079EFBE /* customCell.swift in Sources */,
+				73EA82F8229907A80004553F /* MCTracks.swift in Sources */,
 				7386CEEB2297AC08008F697A /* newMusic.swift in Sources */,
 				7386CEB722969571008F697A /* ViewController.swift in Sources */,
 				7386CEED2297AC29008F697A /* musicDetail.swift in Sources */,

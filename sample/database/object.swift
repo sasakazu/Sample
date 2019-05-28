@@ -8,18 +8,8 @@
 import Foundation
 import RealmSwift
 
-class MC: Object {
-    
-    @objc dynamic var name = ""
-    @objc dynamic var profile = ""
-    @objc dynamic var image:UIImage?
-    
-    let songs = List<Song>()
-    
-}
 
-
-class Song: Object {
+class Track: Object {
     
     @objc dynamic var name = ""
     @objc dynamic var lyric = ""
