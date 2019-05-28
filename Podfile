@@ -8,6 +8,7 @@ target 'sample' do
   # Pods for sample
   
   pod 'RealmSwift'
+  pod 'Firebase'
 
   target 'sampleTests' do
     inherit! :search_paths
