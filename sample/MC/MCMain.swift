@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import FirebaseAuth
 
 class MCMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,16 +23,13 @@ class MCMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let realm = try! Realm()
-//        
-//        
-//        let users = realm.objects(MC.self)
-//        
-//        let u = users.first
-//        
-//        name.text = u?.name
-//        
-//        print(u?.name as Any)
+        let user = Auth.auth().addStateDidChangeListener { (auth, user) in
+            
+            self.name.text = user?.email
+        
+            print(user?.email)
+            
+        }
         
     }
     

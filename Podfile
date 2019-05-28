@@ -10,6 +10,7 @@ target 'sample' do
   pod 'RealmSwift'
   pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'FirebaseDatabase'
   
 
   target 'sampleTests' do

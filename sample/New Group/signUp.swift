@@ -7,31 +7,47 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+
 
 class signUp: UIViewController {
-
+  
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
     @IBOutlet weak var pass2TF: UITextField!
     
+    @IBOutlet weak var nameTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        
+   
     }
     
 
     @IBAction func loginBtn(_ sender: Any) {
         
-        Auth.auth().createUser(withEmail: emailTF.text!, password: passTF.text!) { (authResult, error) in
-         
+        
+        if let username = nameTF.text,
+            let email = emailTF.text,
+            let password = passTF.text {
+        
+            Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             
+         
+            if let user = authResult?.user {
+             
+          
+                
+                
+            }
             guard (authResult?.user) != nil else { return }
         
+            print(username)
         
-        }
+            }}
     
     }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class login: UIViewController {
     
@@ -17,14 +18,20 @@ class login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            
+        print(user?.email)
+        
+        }
     }
     
 
     @IBAction func loginBtn(_ sender: Any) {
         
         Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (user, error) in
-           
+            
+
         
             if let error = error {
                 print("login failed! \(error)")
@@ -32,10 +39,28 @@ class login: UIViewController {
             }
             
             if let user = user {
+                
+                
                 print("user :) has been signed in successfully.")
             }
         }
     }
+    
+    
+    
+    @IBAction func logout(_ sender: Any) {
+    
+        do{
+            try Auth.auth().signOut()
+            
+            print("sign out")
+        }catch let error as NSError{
+            print(error)
+        }
+    
+    
+    }
+    
     
 }
 
